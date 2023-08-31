@@ -1,0 +1,21 @@
+.wrapper {
+    // width: var(--default-layout-width);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: var(--default-layout-navigation-height);
+    background-color: var(--primary);
+}
+
+.inner {
+    width: var(--default-layout-width);
+}
+
+.custom{
+    height: 40px;
+    padding: 0 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-right: 16px;
+}
