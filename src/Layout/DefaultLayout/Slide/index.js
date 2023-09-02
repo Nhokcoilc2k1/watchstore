@@ -1,41 +1,39 @@
 import classNames from 'classnames/bind';
 import styles from './Slide.module.scss';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import slides from '~/assets/data/Slide';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import SwiperNavButton from './SwiperNavButton';
 
 const cx = classNames.bind(styles);
 
 function Slide() {
-
-    const PrevArrow = (props) => {
-        const {onClick } = props;
-        return (
-            <div className={cx('prev-arrow')}  onClick={onClick}></div>
-        );
-    };
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        focusOnSelect: true,
-        prevArrow: <PrevArrow />
-    };
-
     return (
         <div className={cx('wrapper')}>
-            <Slider {...settings}>
-                {slides.map((item, index) => (
-                    <div className={cx('slide')} key={index}>
-                        <img src={item.url} alt="slide" className={cx('img')} />
-                    </div>
+            <Swiper
+                modules={[Navigation, Pagination, A11y, Autoplay]}
+                spaceBetween={20}
+                slidesPerView={1}
+                loop
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }}
+                navigation={true}
+                pagination={{ clickable: true }}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper.slidePrev())}
+            >
+                {slides.map((slide) => (
+                    <SwiperSlide key={slide.id}>
+                        <img src={slide.url} alt={slide.title} />
+                    </SwiperSlide>
                 ))}
-            </Slider>
+                <SwiperNavButton />
+            </Swiper>
         </div>
     );
 }
