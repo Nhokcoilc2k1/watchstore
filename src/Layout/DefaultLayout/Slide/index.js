@@ -24,8 +24,6 @@ function Slide() {
                 }}
                 navigation={true}
                 pagination={{ clickable: true }}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper.slidePrev())}
             >
                 {slides.map((slide) => (
                     <SwiperSlide key={slide.id}>

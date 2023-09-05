@@ -1,36 +1,21 @@
-import classNames from "classnames/bind";
-import styles from './Home.module.scss'
-import { Grid } from "@mui/material";
+import classNames from 'classnames/bind';
+import styles from './Home.module.scss';
+import Slogan from '../components/Slogan';
+import ProductSlide from '../components/ProductSilde';
+import { products } from '~/assets/data/Product';
+import TypeWatch from '../components/TypeWatch';
 
 const cx = classNames.bind(styles);
 
 function Home() {
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('banner')}>
-                {/* <Grid container spacing={3} pt={0} pl={0}>
-                    <Grid item lg={3} md={6} xs={12} >
-                        <img src="" />
-                        <h4>Miễn phí vận chuyển</h4>
-                        <p>Giao hàng nhanh, đóng gói cẩn thận</p>
-                    </Grid>
-                    <Grid item lg={3} md={6} xs={12} >
-                        <img src="" />
-                        <h4>Miễn phí vận chuyển</h4>
-                        <p>Giao hàng nhanh, đóng gói cẩn thận</p>
-                    </Grid>
-                    <Grid item lg={3} md={6} xs={12} >
-                        <img src="" />
-                        <h4>Miễn phí vận chuyển</h4>
-                        <p>Giao hàng nhanh, đóng gói cẩn thận</p>
-                    </Grid>
-                    <Grid item lg={3} md={6} xs={12} >
-                        <img src="" />
-                        <h4>Miễn phí vận chuyển</h4>
-                        <p>Giao hàng nhanh, đóng gói cẩn thận</p>
-                    </Grid>
-                </Grid> */}
-            </div>
+            <Slogan />
+            <section className={cx('section')}>
+                <ProductSlide data={products} title="Top tìm kiếm" />
+                <ProductSlide data={products} title="Sản phẩm bán chạy" />
+                <TypeWatch />
+            </section>
         </div>
     );
 }
