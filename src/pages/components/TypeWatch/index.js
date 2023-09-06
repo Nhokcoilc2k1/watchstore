@@ -12,10 +12,16 @@ function TypeWatch() {
             <div className={cx('box')}>
                 <div className={cx('row')}>
                     {typewatchs.map((item) => (
-                        <a key={item.id} href="/" className={cx('col', 'l-2-4', 'item')}>
-                            <img src={item.img} alt={item.title} />
-                            <span>{item.title}</span>
-                        </a>
+                        <div key={item.id} className={cx('col', 'l-2-4', 'item')}>
+                            <a href='/'>
+                                <img src={item.img} alt={item.title} />
+                                <span>{item.title}</span>
+                            </a>
+                        </div>
+                        // <a key={item.id} href="/" className={cx('col', 'l-2-4', 'item')}>
+                        //     <img src={item.img} alt={item.title} />
+                        //     <span>{item.title}</span>
+                        // </a>
                     ))}
                 </div>
             </div>
