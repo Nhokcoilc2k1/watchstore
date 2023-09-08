@@ -6,6 +6,9 @@ import { products } from '~/assets/data/Product';
 import TypeWatch from '../components/TypeWatch';
 import Brand from '../components/Brand';
 import ListProduct from '../components/ListProduct';
+import Button from '~/components/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -18,8 +21,13 @@ function Home() {
                 <ProductSlide data={products} title="Sản phẩm bán chạy" />
                 <TypeWatch />
                 <Brand />
-                <ListProduct data className={cx('l-2-4')}>
-                    <h2 className={cx('title')}>Các sản phẩm liên quan</h2>
+                <h2 className={cx('title')}>Các sản phẩm liên quan</h2>
+                <ListProduct data={products} className={cx('l-2-4')}>
+                    <div className={cx('custom-btn')}>
+                        <Button outline rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                            Xem thêm
+                        </Button>
+                    </div>
                 </ListProduct>
             </section>
         </div>

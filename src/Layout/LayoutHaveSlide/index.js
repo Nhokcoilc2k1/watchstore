@@ -1,10 +1,10 @@
 import classNames from 'classnames/bind';
-import styles from './DefaultLayout.module.scss';
+import styles from '../DefaultLayout/DefaultLayout.module.scss';
 
 import Header from '../components/Header';
-import Footer from '../components/Footer';
 import Navigation from '../components/Navigation';
-import BreadCrumb from './BreadCrumb';
+import Slide from './Slide';
+import Footer from '../components/Footer';
 
 const cx = classNames.bind(styles);
 
@@ -13,7 +13,7 @@ function DefaultLayout({ children }) {
         <div className={cx('wrapper')}>
             <Header />
             <Navigation />
-            <BreadCrumb />
+            <Slide />
             <div className={cx('container')}>{children}</div>
             <Footer />
         </div>

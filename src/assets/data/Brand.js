@@ -7,22 +7,22 @@ export const brands = [
     {
         id: 2,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'Orient',
     },
     {
         id: 3,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'Bentley',
     },
     {
         id: 4,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'Citizen',
     },
     {
         id: 5,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'SR',
     },
 
     {
@@ -33,31 +33,31 @@ export const brands = [
     {
         id: 7,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'HuBlot',
     },
     {
         id: 8,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'Seiko',
     },
     {
         id: 9,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'Longines',
     },
     {
         id: 10,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'Omega',
     },
     {
         id: 11,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'tissot',
     },
     {
         id: 12,
         url: 'https://wscdn.vn/upload/original-image/CS.jpg?size=260x81&fomat=webp',
-        desc: 'casio',
+        desc: 'G-shock',
     },
 ];
