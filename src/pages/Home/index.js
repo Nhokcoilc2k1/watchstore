@@ -17,14 +17,20 @@ function Home() {
         <div className={cx('wrapper')}>
             <Slogan />
             <section className={cx('section')}>
-                <ProductSlide data={products} title="Top tìm kiếm" />
-                <ProductSlide data={products} title="Sản phẩm bán chạy" />
+                <ProductSlide data={products}>
+                    <h3 className={cx('header-slide')}>Top tìm kiếm</h3>
+                    <span className={cx('swiper-pagination')}></span>
+                </ProductSlide>
+                <ProductSlide data={products}>
+                    <h3 className={cx('header-slide')}>Sản phẩm bán chạy</h3>
+                    <span className={cx('swiper-pagination')}></span>
+                </ProductSlide>
                 <TypeWatch />
                 <Brand />
                 <h2 className={cx('title')}>Các sản phẩm liên quan</h2>
                 <ListProduct data={products} className={cx('l-2-4')}>
                     <div className={cx('custom-btn')}>
-                        <Button outline rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                        <Button outline to={'/products'} rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                             Xem thêm
                         </Button>
                     </div>

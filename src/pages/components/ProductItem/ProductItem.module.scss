@@ -1,6 +1,6 @@
 .wrapper {
     width: 227px;
-    height: 390px;
+    // height: 390px;
     padding: 10px;
     display: block;
     border: 1px solid rgba(22, 24, 35, 0.18);
@@ -54,25 +54,15 @@
     font-size: 1.4rem;
 }
 
-.discont {
-    background: #f9e9e2;
+.discount {
+    background: var(--color-bg-discount);
     border-radius: 2px;
     color: var(--color-price);
     margin-left: 10px;
     padding: 2px 2px;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 
 .item-rating {
     margin-top: 8px;
-    display: flex;
-    font-size: 1.2rem;
-    align-items: center;
-    color: var(--color-rating);
-
-    span {
-        margin-left: 5px;
-        margin-bottom: -3px;
-        color: currentColor;
-    }
 }

@@ -12,7 +12,7 @@ import { useRef, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
-function ProductSlide({ data, title }) {
+function ProductSlide({ data, title, children }) {
     const [slideBegOrNot, handleSlideByState] = useState({
         isFirt: true,
         isLast: false,
@@ -38,8 +38,7 @@ function ProductSlide({ data, title }) {
 
     return (
         <div className={cx('wrapper')}>
-            <h3>{title}</h3>
-            <span className={cx('swiper-pagination')}></span>
+            {children}
             <div className={cx('box')}>
                 <Swiper
                     navigation={true}

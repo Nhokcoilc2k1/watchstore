@@ -9,9 +9,29 @@
 .box {
     width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
 
-    a{
-        font-size: 1.4rem;
+.link {
+    font-size: 1.4rem;
+    margin-right: 8px;
+
+    &:hover {
+        color: var(--primary);
+    }
+}
+
+.breadcrumb {
+    display: inline-flex;
+    align-items: center;
+
+    span {
+        cursor: context-menu;
         margin-right: 8px;
     }
+}
+
+.sublink {
+    font-size: 1.4rem;
 }
