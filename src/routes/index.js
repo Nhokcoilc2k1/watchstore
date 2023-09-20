@@ -1,4 +1,7 @@
+// Layout
 import { LayoutHaveSlide } from '~/Layout';
+
+// Pages
 import Home from '~/pages/Home';
 import Products from '~/pages/Products';
 import DetailProduct from '~/pages/DetailProduct';

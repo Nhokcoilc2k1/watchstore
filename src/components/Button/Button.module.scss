@@ -11,6 +11,7 @@
     background-color: var(--white);
     border-radius: var(--search-border-radius);
     border: 1px solid transparent;
+    font-family: 'Be Vietnam Pro', sans-serif;
     cursor: pointer;
 
     + .wrapper {
@@ -23,6 +24,10 @@
         opacity: 0.6;
         user-select: none;
     }
+}
+
+.title {
+    margin-bottom: -2px;
 }
 
 .icon + .title,

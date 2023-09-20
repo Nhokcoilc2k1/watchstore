@@ -1,64 +1,76 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
-import Tippy from '@tippyjs/react/headless';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCartPlus, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+import { faCaretDown, faCartPlus, faSignOut, faTableList } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import images from '~/assets/images';
-import { Wrapper as PopperWrapper } from '~/components/Popper';
-import SearchProductItem from '~/components/SearchProductItem';
 import Button from '~/components/Button';
+import MenuAccount from '~/components/Popper/MenuAccount';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
+import Search from '../Search';
 
 const cx = classNames.bind(styles);
 
-function Header() {
-    const [searchResult, setSearchResult] = useState([]);
+const MENU_ACCOUNTS = [
+    {
+        icon: <FontAwesomeIcon icon={faUser} />,
+        title: 'Tài khoản của tôi',
+        to: '/account',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faTableList} />,
+        title: 'Đơn hàng',
+        to: '/don-hang',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faSignOut} />,
+        title: 'Đăng xuất',
+        to: '/',
+    },
+];
 
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-        }, 3000);
-    }, []);
+function Header() {
+    const currentUser = true;
 
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img className={cx('logo')} src={images.logo} alt="Logo watchstore" />
-                <Tippy
-                    visible={searchResult.length > 0}
-                    interactive={true}
-                    placement="bottom-end"
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex="-1" {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>Gợi ý sản phẩm</h4>
-                                <SearchProductItem />
-                                <SearchProductItem />
-                                <SearchProductItem />
-                                <a href={'/'} className={cx('more-search')}>
-                                    Xem thêm 10982 sản phẩm
-                                </a>
-                            </PopperWrapper>
-                        </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </button>
-                        <input placeholder="Tìm kiếm đồng hồ theo tên, hãng" />
-                    </div>
-                </Tippy>
-                <div className={cx('action')}>
-                    <Button primary className={cx('custom-btn')} rightIcon={<FontAwesomeIcon icon={faCaretDown} />}>
-                        Đăng nhập
-                    </Button>
+                <Link to={'/'} className={cx('box-logo')}>
+                    <img className={cx('logo')} src={images.logo} alt="Logo watchstore" />
+                </Link>
 
-                    <button className={cx('cart')}>
+                <Search />
+
+                <div className={cx('action')}>
+                    {currentUser ? (
+                        <MenuAccount items={MENU_ACCOUNTS}>
+                            <div className={cx('btn-header')}>
+                                <Button
+                                    primary
+                                    className={cx('custom-btn')}
+                                    rightIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                                >
+                                    0382932320
+                                </Button>
+                            </div>
+                        </MenuAccount>
+                    ) : (
+                        <>
+                            <Button
+                                primary
+                                className={cx('custom-btn')}
+                                rightIcon={<FontAwesomeIcon icon={faCaretDown} />}
+                            >
+                                Đăng nhập
+                            </Button>
+                        </>
+                    )}
+
+                    <Link className={cx('cart')} to={'/cart'}>
                         <FontAwesomeIcon icon={faCartPlus} />
                         <span className={cx('number-item')}>2</span>
-                    </button>
+                    </Link>
                 </div>
             </div>
         </header>

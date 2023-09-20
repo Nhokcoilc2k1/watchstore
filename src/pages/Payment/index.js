@@ -18,7 +18,7 @@ function Payment() {
                         </div>
                         <div className={cx('from-group')}>
                             <p className={cx('require')}>Số điện thoại</p>
-                            <input name="name" placeholder="số điện thoại" />
+                            <input name="phone" placeholder="số điện thoại" />
                         </div>
                         <div className={cx('from-group')}>
                             <p className={cx('require')}>Địa chỉ nhận hàng</p>

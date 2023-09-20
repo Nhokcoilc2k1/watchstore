@@ -20,7 +20,7 @@ function Account() {
                                 <p>Chưa có hạng thành viên</p>
                             </div>
                         </div>
-                        <div className={cx('nav-item')}>
+                        <div className={cx('nav-item', 'nav-active')}>
                             <FontAwesomeIcon icon={faUser} className={cx('icon-item')} />
                             <span>Thông tin tài khoản</span>
                         </div>
