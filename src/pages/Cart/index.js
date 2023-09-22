@@ -4,10 +4,17 @@ import Button from '~/components/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faMinus, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { products } from '~/assets/data/Product';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Cart() {
+    const [increase, setIncrease] = useState();
+
+    const hanleIncrease = () => {
+        
+    }
+
     return (
         <div className={cx('wrapper')}>
             <h2 className={cx('name-pages')}>Giỏ hàng</h2>
@@ -64,7 +71,7 @@ function Cart() {
                                         </td>
                                         <td className={cx('calcul-btn')}>
                                             <div className={cx('box-btn')}>
-                                                <button className={cx('btn')}>
+                                                <button className={cx('btn')} onClick={hanleIncrease}>
                                                     <FontAwesomeIcon icon={faMinus} />
                                                 </button>
                                                 <div className={cx('quantity')}>1</div>

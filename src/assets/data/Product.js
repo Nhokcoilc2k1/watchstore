@@ -6,6 +6,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 3,
         star: 4,
     },
     {
@@ -15,6 +16,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 5,
         rating: 4,
     },
     {
@@ -24,6 +26,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 2,
         rating: 4,
     },
     {
@@ -33,6 +36,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 6,
         rating: 4,
     },
     {
@@ -42,6 +46,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 8,
         rating: 4,
     },
     {
@@ -51,6 +56,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 4,
         rating: 4,
     },
     {
@@ -60,6 +66,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 3,
         rating: 4,
     },
     {
@@ -69,6 +76,7 @@ export const products = [
         salePrice: '5.850.000',
         regularPrice: '8.800.000',
         discount: '21%',
+        quantity: 9,
         rating: 4,
     },
 ];

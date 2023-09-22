@@ -9,10 +9,25 @@ import SideBar from '../components/SideBar';
 import { products } from '~/assets/data/Product';
 import ListProduct from '../components/ListProduct';
 import Button from '~/components/Button';
+import Pagination from '../components/Pagination';
+import { useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function Products() {
+    const [pagination, setPagination] = useState({
+        _page: 1,
+        _limit: 10,
+        _totalRows: 31,
+    });
+
+    useEffect(() => {
+        //call api
+    }, []);
+
+    const handlePageChange = (newPage) => {
+        console.log('new Page', newPage);
+    };
     return (
         <div className={cx('wrapper')}>
             <h4 className={cx('title')}>Sản phẩm</h4>
@@ -54,6 +69,7 @@ function Products() {
                     </div>
 
                     <ListProduct data={products} className={cx('l-3')} />
+                    <Pagination pagination={pagination} onPageChange={handlePageChange} />
                 </div>
                 <div className={cx('col', 'l-2-4')}>
                     <SideBar />

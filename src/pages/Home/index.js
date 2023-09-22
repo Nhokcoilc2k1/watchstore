@@ -30,7 +30,7 @@ function Home() {
                 <h2 className={cx('title')}>Các sản phẩm liên quan</h2>
                 <ListProduct data={products} className={cx('l-2-4')}>
                     <div className={cx('custom-btn')}>
-                        <Button outline to={'/products'} rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
+                        <Button outline href="/products" rightIcon={<FontAwesomeIcon icon={faArrowRight} />}>
                             Xem thêm
                         </Button>
                     </div>

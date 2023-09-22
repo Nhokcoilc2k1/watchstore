@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 function ProductItem({ product }) {
     return (
-        <a href={product.url} className={cx('wrapper')}>
+        <a href={`/products/${product.id}`} className={cx('wrapper')}>
             <img src={product.url} alt="anh" />
             <div className={cx('info')}>
                 <h4 className={cx('name-product')}>{product.name}</h4>

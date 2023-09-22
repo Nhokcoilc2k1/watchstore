@@ -16,7 +16,7 @@ function Search() {
 
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([1, 2]);
+            setSearchResult([]);
         }, 3000);
     }, []);
 

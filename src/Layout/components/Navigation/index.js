@@ -46,12 +46,12 @@ function Navigation() {
                     Sản phẩm mới
                 </Button>
                 <Button className={cx('custom')} primary>
-                    tin tức
+                    Giới thiệu
                 </Button>
                 <Button className={cx('custom')} primary>
-                    Chính sách
+                    Tin tức
                 </Button>
-                <Button className={cx('custom')} primary>
+                <Button to={'/contact'} className={cx('custom')} primary>
                     Liên hệ
                 </Button>
             </nav>
