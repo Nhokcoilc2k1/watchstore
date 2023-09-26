@@ -9,6 +9,8 @@ import Button from '~/components/Button';
 import MenuAccount from '~/components/Popper/MenuAccount';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import Search from '../Search';
+import FormLogin from '~/components/Form/FormLogin';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -31,7 +33,12 @@ const MENU_ACCOUNTS = [
 ];
 
 function Header() {
-    const currentUser = true;
+    const [showForm, setShowForm] = useState(false);
+    const currentUser = false;
+
+    const hanleShowForm = () => {
+        setShowForm(true);
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -57,11 +64,7 @@ function Header() {
                         </MenuAccount>
                     ) : (
                         <>
-                            <Button
-                                primary
-                                className={cx('custom-btn')}
-                                rightIcon={<FontAwesomeIcon icon={faCaretDown} />}
-                            >
+                            <Button primary className={cx('custom-btn')} onClick={hanleShowForm}>
                                 Đăng nhập
                             </Button>
                         </>
@@ -73,6 +76,7 @@ function Header() {
                     </Link>
                 </div>
             </div>
+            {showForm && <FormLogin isClose={setShowForm}/>}
         </header>
     );
 }
