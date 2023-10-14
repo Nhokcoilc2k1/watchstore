@@ -4,6 +4,7 @@ const images = {
     slide1: require('~/assets/images/slide-1.png'),
     size1: require('~/assets/images/size1.png'),
     size2: require('~/assets/images/size2.png'),
+    admin: require('~/assets/images/admin.jpg'),
 };
 
 export default images;

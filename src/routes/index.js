@@ -9,6 +9,8 @@ import Cart from '~/pages/Cart';
 import Payment from '~/pages/Payment';
 import Account from '~/pages/Account';
 import Contact from '~/pages/Contact';
+import HomeAdmin from '~/pages/admin/HomeAdmin';
+import ProductManager from '~/pages/admin/ProductManager';
 
 const publicRoutes = [
     { path: '/', component: Home, layout: LayoutHaveSlide },
@@ -20,6 +22,11 @@ const publicRoutes = [
     { path: '/contact', component: Contact },
 ];
 
+const adminRoutes = [
+    { path: '/', component: HomeAdmin },
+    { path: '/manager', component: ProductManager },
+];
+
 const privateRoutes = [];
 
-export { publicRoutes, privateRoutes };
+export { publicRoutes, privateRoutes, adminRoutes };
